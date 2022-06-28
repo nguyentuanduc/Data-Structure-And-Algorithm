@@ -169,27 +169,28 @@ public class Graphs {
 				vertexList[j] = vertexList[j + 1];
 			}
 			
-			for(int row = delVert; row > nVerts ; row++) {
+			for(int row = delVert; row < nVerts ; row++) {
 				moveRowUp(row, nVerts);
 			}
 			
-			for(int col = delVert; col > nVerts ; col++) {
+			for(int col = delVert; col < nVerts ; col++) {
 				moveRowLeft(col, nVerts - 1);
 			}
-			
 			
 		}
 		nVerts--;
 	}
 	
 	private void moveRowUp(int row, int length) {
-		for(int col = 0; col < length; col++) {
+		for(int col = 0; col <= length; col++) {
+			System.out.println(adjMat[row][col]);
+			System.out.println(adjMat[row+1][col]);
 			adjMat[row][col] = adjMat[row+1][col];
 		}
 	}
 	
 	private void moveRowLeft(int col, int length) {
-		for(int row = 0; row < length; row++) {
+		for(int row = 0; row <= length; row++) {
 			adjMat[row][col] = adjMat[row][col+1];
 		}
 	}

@@ -22,7 +22,6 @@ public class Main {
 		graphs.addVertex('D');
 		graphs.addVertex('E');
 
-		
 		graphs.addEgde(0, 1);
 		graphs.addEgde(1, 2);
 		graphs.addEgde(0, 3);
