@@ -56,21 +56,23 @@ class ArrayBubble {
 	
 	
 	public void bubbleSort() {
-		long n = nElems;
+		int n = nElems;
 		int j = 0;
+		
 		while( j < n) {
-			
 			for(int i = j + 1; i < n; i++) {
 				long temp = a[j];
 				if(temp > a[i]) {
 					a[j] = a[i];
 					a[i] = temp;
-					
-				} 
-				j++;
+					j++;
+				}
+				if(temp < a[i]) {
+					j++;
+				}
 			}
 			j = 0;
-			n  = n - 1;
+			n--;
 		}
 	}
 	
